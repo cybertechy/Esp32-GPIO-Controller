@@ -70,10 +70,6 @@ function Navbar() {
     return <>
         <nav className='flex flex-row gap-10 p-3 w-full bg-black dark:bg-slate-800 justify-center items-center'>
             <p className='text-2xl font-semibold'> ESP32 Controller </p>
-            <span className='hidden bg-red-400'></span>
-            <span className='hidden bg-red-700 '></span>
-            <span className='hidden bg-green-800'></span>
-            <span className='hidden bg-sky-700'></span>
         </nav>
         <ToastContainer />
         <section className="lg:fixed right-2 bg-black dark:bg-slate-800 rounded-sm lg:mt-8 border-b shadow-md lg:border border-green-500 p-3 lg:w-56 h-fit ">
