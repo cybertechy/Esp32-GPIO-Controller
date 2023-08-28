@@ -33,6 +33,9 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+       run:
+         working-directory: ./Web/
     steps:
     - uses: actions/checkout@v3
 
@@ -41,7 +44,7 @@ jobs:
       with:
         node-version: ${{ env.NODE_VERSION }}
         cache: 'npm'
-        cache-dependency-path: "./Web/package.json"
+        cache-dependency-path: './Web/yarn-lock.json'
 
     - name: npm install, build, and test
       run: |
