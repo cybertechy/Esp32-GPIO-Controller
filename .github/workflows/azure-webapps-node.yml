@@ -87,3 +87,4 @@ jobs:
         
     - name: Delete zip file
       run: rm next.zip
+      
