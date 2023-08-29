@@ -6,9 +6,6 @@
 #include <Constants.hpp>
 #include <SerialControl.hpp>
 #include <Preferences.h>
-#include <ESPAsyncDNSServer.h>
-#include "esp_heap_caps.h"
-
 
 
 //#define SerialDebug
