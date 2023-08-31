@@ -48,9 +48,12 @@ jobs:
       run: |
         npm install
         npm run build
+    
+    - name: Prebuild Display the files
+      run: ls
 
     - name: Zip all files for upload between jobs
-      run: zip out.zip ./* out -qr
+      run: zip out.zip out
 
     - name: Display the files
       run: ls
