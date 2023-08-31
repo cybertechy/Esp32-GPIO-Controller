@@ -24,7 +24,7 @@ on:
 
 env:
   AZURE_WEBAPP_NAME: esp32-gpio-controller    # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: next.zip      # set this to the path to your web app project, defaults to the repository root
+  AZURE_WEBAPP_PACKAGE_PATH: out.zip      # set this to the path to your web app project, defaults to the repository root
   NODE_VERSION: '18.x'                # set this to the node version to use
 
 permissions:
@@ -50,7 +50,7 @@ jobs:
         npm run build
 
     - name: Zip all files for upload between jobs
-      run: zip next.zip ./* .next -qr
+      run: zip out.zip ./* out -qr
 
     - name: Display the files
       run: ls
@@ -59,7 +59,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: node-app
-        path: ./Web/next.zip
+        path: ./Web/out.zip
 
   deploy:
     permissions:
@@ -86,5 +86,5 @@ jobs:
         
         
     - name: Delete zip file
-      run: rm next.zip
+      run: rm out.zip
       
