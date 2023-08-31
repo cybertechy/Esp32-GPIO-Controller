@@ -53,7 +53,7 @@ jobs:
       run: cd out && ls
 
     - name: Zip all files for upload between jobs
-      run: zip -r out.zip out
+      run: zip -r out.zip .next/standalone
 
     - name: Display the files
       run: ls
