@@ -50,7 +50,7 @@ jobs:
         npm run build
     
     - name: Prebuild Display the files
-      run: ls
+      run: cd out && ls
 
     - name: Zip all files for upload between jobs
       run: zip -r out.zip ./Web/out
