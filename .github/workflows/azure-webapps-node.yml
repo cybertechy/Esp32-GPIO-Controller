@@ -50,10 +50,10 @@ jobs:
         npm run build
     
     - name: Prebuild Display the files
-      run: cd .next/standalone && ls
+      run: cd .next && ls
 
     - name: Zip all files for upload between jobs
-      run: zip out.zip ./* .next/standalone -qr
+      run: zip out.zip ./* .next -qr
 
     - name: Display the files
       run: ls
